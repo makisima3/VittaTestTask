@@ -1,0 +1,22 @@
+﻿<Window x:Class="PaymentsTestTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PaymentsTestTask"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550.545" Width="800">
+    <Grid>
+        <DataGrid x:Name="OrdersDataGrid" HorizontalAlignment="Left" Height="335" Margin="10,44,0,0" VerticalAlignment="Top" Width="383" IsReadOnly="True" SelectionChanged="OrdersDataGrid_SelectionChanged"/>
+        <DataGrid x:Name="ArrivalsDataGrid" HorizontalAlignment="Left" Height="335" Margin="399,44,0,0" VerticalAlignment="Top" Width="383" IsReadOnly="True" SelectionChanged="ArrivalsDataGrid_SelectionChanged"/>
+        <Label Content="Заказы" HorizontalAlignment="Left" Margin="146,10,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Приходы" HorizontalAlignment="Left" Margin="569,10,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="OrderID_TB" PreviewTextInput="TextBox_PreviewTextInput" HorizontalAlignment="Left" Height="34" Margin="10,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="143" FontSize="20"/>
+        <TextBox x:Name="ArrivalID_TB" PreviewTextInput="TextBox_PreviewTextInput" HorizontalAlignment="Left" Height="34" Margin="399,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="143" FontSize="20"/>
+        <Button x:Name="FindOrderButton" Content="Найти заказ по id" HorizontalAlignment="Left" Height="34" Margin="158,384,0,0" VerticalAlignment="Top" Width="207" FontSize="20" Click="FindOrderButton_Click"/>
+        <Button x:Name="FindArrivalButton" Content="Найти приход по id" HorizontalAlignment="Left" Height="34" Margin="547,384,0,0" VerticalAlignment="Top" Width="207" FontSize="20" Click="FindArrivalButton_Click"/>
+        <Button x:Name="AddPaymentButton" Content="Создать платеж" HorizontalAlignment="Left" Height="40" Margin="10,454,0,0" VerticalAlignment="Top" Width="185" FontSize="20" Click="AddPaymentButton_Click"/>
+        <Button x:Name="DropFilters" Content="СБросить Фильтры" HorizontalAlignment="Left" Height="39" Margin="305,0,0,0" VerticalAlignment="Top" Width="180" FontSize="20" Click="DropFilters_Click"/>
+
+    </Grid>
+</Window>
